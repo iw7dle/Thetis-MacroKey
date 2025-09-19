@@ -218,13 +218,6 @@ v.addListener(e => {
  
   }
 
-  // MUTE (F16)
-  if (e.state === "DOWN" && key === "F16") {
-    muteState = !muteState;
-    sendCAT(muteState ? "ZZMA1;" : "ZZMA0;");
-    console.log(`➡️ MUTE ${muteState ? "ON" : "OFF"}`);
-  }
-
   // BAND UP/DOWN
   if (e.state === "DOWN" && key === "F22") { sendCAT("BD;"); console.log("➡️ BAND DOWN"); }
   if (e.state === "DOWN" && key === "F23") { sendCAT("BU;"); console.log("➡️ BAND UP"); }
@@ -236,3 +229,4 @@ v.addListener(e => {
     console.log(`➡️ PTT ${pttState ? "ON" : "OFF"}`);
   }
 });
+
